@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Driver Monitoring</title>
+
+<style>
+body {
+    margin:0;
+    font-family: Arial;
+    background:#0f2027;
+    color:white;
+}
+
+.container {
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:20px;
+    padding:20px;
+}
+
+.card {
+    background:#1c2b36;
+    padding:15px;
+    border-radius:10px;
+}
+
+img {
+    width:100%;
+    border-radius:10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1 style="text-align:center;">🚗 Driver Monitoring Dashboard</h1>
+
+<div class="container">
+
+<div class="card">
+    <h3>Live Feed</h3>
+    <img src="/video">
+</div>
+
+<div>
+
+<div class="card">
+<h3>Status</h3>
+<div id="status">AWAKE</div>
+<div>Fatigue: <span id="score">0</span>%</div>
+</div>
+
+<div class="card">
+<h3>Events</h3>
+<div id="events"></div>
+</div>
+
+</div>
+
+</div>
+
+<script>
+async function updateStatus(){
+    let res=await fetch('/status');
+    let data=await res.json();
+
+    document.getElementById('status').innerText=data.status;
+    document.getElementById('score').innerText=data.fatigue_score;
+}
+
+async function updateEvents(){
+    let res=await fetch('/events');
+    let data=await res.json();
+
+    document.getElementById('events').innerHTML=data.reverse().join('<br>');
+}
+
+setInterval(updateStatus,1000);
+setInterval(updateEvents,2000);
+</script>
+
+</body>
+</html>
