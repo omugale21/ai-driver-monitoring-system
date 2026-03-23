@@ -146,7 +146,7 @@ while True:
                         cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 2)
 
     # -------------------------------
-    # 🔥 DOCKER FIX (IMPORTANT)
+    #  DOCKER FIX (IMPORTANT)
     # -------------------------------
     frame_count += 1
 

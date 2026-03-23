@@ -23,7 +23,7 @@ class VideoRecorder:
 
         h, w, _ = frame.shape
 
-        # 🔥 Use MJPG codec
+        #  Use MJPG codec
         fourcc = cv2.VideoWriter_fourcc(*'MJPG')
 
         self.out = cv2.VideoWriter(filename, fourcc, self.fps, (w, h))
@@ -37,7 +37,7 @@ class VideoRecorder:
         if not self.recording or self.out is None:
             return
 
-        # 🔥 Measure actual FPS dynamically
+        #  Measure actual FPS dynamically
         current_time = time.time()
         if self.prev_time is not None:
             time_diff = current_time - self.prev_time

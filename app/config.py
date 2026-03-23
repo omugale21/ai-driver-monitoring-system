@@ -1,5 +1,5 @@
 # -------------------------------
-# 🔥 EXISTING (KEEP THESE)
+#  EXISTING (KEEP THESE)
 # -------------------------------
 EAR_THRESHOLD = 0.23
 MAR_THRESHOLD = 0.75
@@ -11,7 +11,7 @@ MOUTH = list(range(48, 68))
 
 
 # -------------------------------
-# 🔥 NEW (ADVANCED CONFIG)
+#  NEW (ADVANCED CONFIG)
 # -------------------------------
 
 # Fatigue thresholds

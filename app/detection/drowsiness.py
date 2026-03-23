@@ -29,7 +29,7 @@ class DrowsinessDetector:
     # -------------------------------
     def process(self, points):
 
-        # ✅ MediaPipe Landmark Indices (stable selection)
+        #  MediaPipe Landmark Indices (stable selection)
         LEFT_EYE = [362, 385, 387, 263, 373, 380]
         RIGHT_EYE = [33, 160, 158, 133, 153, 144]
         MOUTH = [78, 81, 13, 311, 308, 402, 14, 178]
@@ -46,7 +46,7 @@ class DrowsinessDetector:
         mar = self.calculate_MAR(mouth)
 
         # -------------------------------
-        # 🔥 TUNED THRESHOLDS (MediaPipe)
+        #  TUNED THRESHOLDS (MediaPipe)
         # -------------------------------
         EAR_THRESHOLD = 0.25
         MAR_THRESHOLD = 0.65

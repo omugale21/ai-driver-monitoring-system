@@ -2,3 +2,9 @@ venv/
 __pycache__/
 *.pyc
 *.dat
+
+screenshots/
+recordings/
+*.jpg
+*.png
+*.mp4

@@ -39,7 +39,7 @@ def update_frame():
 
 
 # -------------------------------
-# 🔥 NEW: Receive status via API
+#  NEW: Receive status via API
 # -------------------------------
 @app.route('/update_status', methods=['POST'])
 def update_status_api():

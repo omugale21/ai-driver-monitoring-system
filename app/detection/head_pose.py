@@ -62,7 +62,7 @@ class HeadPoseEstimator:
         return pitch, yaw, roll
 
 
-# 🔥 FINAL ATTENTION FUNCTION (NOSE-BASED — BEST)
+#  FINAL ATTENTION FUNCTION (NOSE-BASED — BEST)
 def get_attention(pitch, yaw, estimator, points, frame_shape):
 
     h, w, _ = frame_shape
@@ -92,5 +92,5 @@ def get_attention(pitch, yaw, estimator, points, frame_shape):
     elif nose_y > center_y + Y_THRESHOLD:
         return "LOOKING_DOWN"
 
-    # 🔥 PERFECT FOCUSED
+    #  PERFECT FOCUSED
     return "FOCUSED"
