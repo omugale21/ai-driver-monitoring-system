@@ -1,6 +1,27 @@
-venv/
+# Git
+.git
+.gitignore
+
+# Python
 __pycache__/
 *.pyc
+*.pyo
+
+# Virtual env
+venv/
+
+# Logs & outputs (IMPORTANT)
+logs/
 recordings/
 screenshots/
-.git/
+
+# Media files
+*.jpg
+*.jpeg
+*.png
+*.mp4
+*.avi
+*.mov
+
+# System files
+.DS_Store
